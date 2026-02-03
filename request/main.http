@@ -1,0 +1,62 @@
+
+# Product section
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+  "name":"Arroz",
+  "price":5.40,
+  "class":"Alimento",
+  "stock": 2
+}
+### Get all products
+
+GET http://localhost:3000/product
+Content-Type: application/json
+
+### Update a product
+
+PATCH http://localhost:3000/product/1
+Content-Type: application/json
+
+{
+  "name":"Sabonete em pó",
+  "price":4.70
+}
+
+
+### Add to stock
+
+PATCH http://localhost:3000/product/add/1
+Content-Type: application/json
+
+{
+  "quantity": 1
+}
+
+
+### Delete product by id
+
+DELETE http://localhost:3000/product/1
+Content-Type: application/json
+
+  
+# Section Auth
+
+### Create user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Gustavo",
+  "email": "gugu@example.com",
+  "password": "123456"
+}
+
+###Login
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "gugu@example.com"
+}
